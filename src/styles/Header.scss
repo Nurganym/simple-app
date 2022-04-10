@@ -19,7 +19,7 @@
           text-decoration: none;
           color: $secondary-color;
           margin: 0 1rem;
-          font-size: 12x;
+          font-size: 16px;
         }
       }
     }
@@ -27,20 +27,29 @@
 
   .logo {
     margin-right: 2rem;
+    text-transform: uppercase;
     font-family: $font-roboto;
+    color: $logo-color;
   }
   .right {
     @include flex-center;
 
     .search {
       @include flex-center;
-      color: $gray-color;
+      margin-right: 5rem;
+
+      .search-icons {
+        color: $gray-color;
+        font-size: 18px;
+        margin-right: 0.4rem;
+      }
     }
 
     .sch-btn {
       background: none;
       border: none;
       cursor: pointer;
+      font-size: 16px;
     }
 
     .right-buttons {
@@ -49,6 +58,22 @@
 
       button {
         margin: 0 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+          font-size: 16px;
+        }
+      }
+
+      .profile-btn {
+        border: 2px solid $profile-color;
+        height: 46px;
+        box-sizing: border-box;
+        width: 100px;
       }
     }
   }

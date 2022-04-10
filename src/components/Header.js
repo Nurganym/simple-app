@@ -2,8 +2,7 @@ import { SearchOutlined } from "@mui/icons-material";
 import React from "react";
 import { Link } from 'react-router-dom';
 // import image from '../images/Vector.svg';
-import '../styles/Header.scss'
-// @use 'styles/_colors.scss';
+import '../styles/Header.scss';
 
 const Header = () => {
   return(
@@ -33,7 +32,7 @@ const Header = () => {
            <button>
              <Link to='/signUp'>Зарегистрироваться</Link>
            </button>
-           <button>
+           <button className="profile-btn">
              <Link to='/profile'>Профиль</Link>
            </button>
          </div>
