@@ -1,0 +1,39 @@
+@import './color';
+@import './buttons';
+
+.main-section {
+  // background: linear-gradient(
+  //     to right bottom,
+  //     rgba(232, 246, 247, 0.587),
+  //     rgba(243, 241, 241, 0.363)
+  //   )
+  //   url(../assets/im1.jpg);
+
+  background: url(../assets/im1.jpg);
+  height: 80vh;
+  background-size: cover;
+  overflow: hidden;
+
+  .content {
+    margin: 14rem;
+    text-align: center;
+    // color: $section-color;
+
+    h1 {
+      font-size: 4rem;
+      color: $main-color;
+      text-shadow: 3px 3px 3px $text-shadow;
+    }
+    p {
+      font-size: 2.5rem;
+      color: $cream-color;
+      margin-top: 35px;
+    }
+    button {
+      @include button;
+    }
+    button:hover {
+      @include hover;
+    }
+  }
+}

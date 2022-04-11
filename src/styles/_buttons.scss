@@ -1,0 +1,18 @@
+@mixin button {
+  background: $button-color;
+  color: $main-color;
+  padding: 10px 2rem;
+  border-radius: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 1px solid $main-color;
+  font-size: 15px;
+  margin-top: 3rem;
+}
+
+@mixin hover {
+  transform: scale(140%);
+  transition: 1s ease-in-out;
+  color: $secondary-color;
+  background: $login-color;
+}
