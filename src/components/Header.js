@@ -1,7 +1,6 @@
 import { SearchOutlined } from "@mui/icons-material";
 import React from "react";
 import { Link } from 'react-router-dom';
-// import image from '../images/Vector.svg';
 import '../styles/Header.scss';
 
 const Header = () => {
@@ -10,13 +9,12 @@ const Header = () => {
       <nav>
         <ul className="ul-items">
           <li className="li-items">
-            <Link to='/home'>Главная</Link>
+            <Link to='/'>Главная</Link>
             <Link to='/about'>О нас</Link>
             <Link to='/news'>Новости</Link>
           </li>
         </ul>
         <div className="logo">
-        {/* <img src={image} /> */}
         <h1>Spoon</h1>
         </div>
 
