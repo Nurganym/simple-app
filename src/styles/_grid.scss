@@ -1,0 +1,9 @@
+@import './color';
+// $equ: 100% / 4;
+
+@mixin grid {
+  // width: $equ;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2);
+}

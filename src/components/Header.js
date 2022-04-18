@@ -9,8 +9,8 @@ const Header = () => {
       <nav>
         <ul className="ul-items">
           <li className="li-items">
-            <Link to='/'>Главная</Link>
-            <Link to='/about'>О нас</Link>
+            <Link to='/'>Home</Link>
+            <Link to='/about'>About</Link>
             <Link to='/news'>Новости</Link>
           </li>
         </ul>
@@ -25,13 +25,10 @@ const Header = () => {
          </div>
          <div className="right-buttons">
            <button>
-             <Link to='/login'>Войти</Link>
-           </button>
-           <button>
-             <Link to='/signUp'>Зарегистрироваться</Link>
+             <Link to='/login'>Login</Link>
            </button>
            <button className="profile-btn">
-             <Link to='/profile'>Профиль</Link>
+             <Link to='/profile'>Profile</Link>
            </button>
          </div>
        </div>

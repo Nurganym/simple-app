@@ -1,0 +1,44 @@
+@import './color';
+@import './fonts';
+@import './grid';
+
+.about {
+  //   background-color: $main-color;
+  margin: 12rem;
+  text-align: center;
+
+  h1 {
+    display: block;
+    font-size: 3rem;
+  }
+  .content-image {
+    margin-top: 2rem;
+    background: url(../assets/about-1.jpg);
+    height: 80vh;
+    background-size: cover;
+  }
+
+  .content-text {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  .content-rows {
+    width: 100%;
+    @include grid;
+    margin-top: 4rem;
+
+    .content-rows_text {
+      margin-top: 3rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
