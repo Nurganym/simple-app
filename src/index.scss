@@ -1,0 +1,11 @@
+@import '../src/styles/_fonts.scss';
+
+body {
+  width: 100%;
+  font-family: $font-roboto;
+  height: 200vh;
+}
+
+#root {
+  height: 100vh;
+}

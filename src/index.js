@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import About from './components/About';
 import News from './components/News';
 import Login from './components/Login';
 import Profile from './components/Profile';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 ReactDOM.render(
   <Router>

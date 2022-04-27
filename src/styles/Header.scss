@@ -1,80 +1,99 @@
 @import './color';
 @import './mixins';
 @import './fonts';
+@import './sizes';
 
 .header {
-  position: sticky;
-  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  height: $header-height;
+  box-shadow: 0 1px 5px $secondary-color;
 
-  nav {
-    @include flex-center;
-    height: 4rem;
-    background-color: $main-color;
+  &_content {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    @include breakpoint(md) {
+      padding: 0 $spacing-lg;
+    }
+    transition: 0.3s ease all;
+  }
+}
 
-    .ul-items {
-      list-style: none;
+nav {
+  @include flex-center;
 
-      .li-items {
-        a {
-          text-decoration: none;
-          color: $secondary-color;
-          margin: 0 1rem;
-          font-size: 16px;
-        }
+  .ul-items {
+    list-style: none;
+    width: 100%;
+    position: fixed;
+    top: $header-height;
+    text-align: center;
+    padding: $spacing-md 0;
+    background: gba($secondary-color, 0.8);
+
+    .li-items {
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        margin: 0 1rem;
+        font-size: $spacing-md;
+        padding: $spacing-md;
       }
     }
   }
+}
 
-  .logo {
-    margin-right: 2rem;
-    text-transform: uppercase;
-    font-family: $font-roboto;
-    color: $logo-color;
-  }
-  .right {
+.logo {
+  margin-right: $spacing-md;
+  text-transform: uppercase;
+  font-family: $font-roboto;
+  color: $logo-color;
+}
+.right {
+  @include flex-center;
+
+  .search {
     @include flex-center;
+    margin-right: 5rem;
 
-    .search {
-      @include flex-center;
-      margin-right: 5rem;
-
-      .search-icons {
-        color: $gray-color;
-        font-size: 18px;
-        margin-right: 0.4rem;
-      }
+    .search-icons {
+      color: $gray-color;
+      font-size: 18px;
+      margin-right: 0.4rem;
     }
+  }
 
-    .sch-btn {
+  .sch-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: $spacing-md;
+  }
+
+  .right-buttons {
+    @include flex-center;
+    margin-right: 1rem;
+
+    button {
+      margin: 0 1rem;
       background: none;
       border: none;
       cursor: pointer;
-      font-size: 16px;
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: $spacing-md;
+      }
     }
 
-    .right-buttons {
-      @include flex-center;
-      margin-right: 1rem;
-
-      button {
-        margin: 0 1rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        a {
-          text-decoration: none;
-          color: $secondary-color;
-          font-size: 16px;
-        }
-      }
-
-      .profile-btn {
-        border: 2px solid $profile-color;
-        height: 46px;
-        box-sizing: border-box;
-        width: 100px;
-      }
+    .profile-btn {
+      border: 2px solid $profile-color;
+      height: 46px;
+      box-sizing: border-box;
+      width: 100px;
     }
   }
 }
