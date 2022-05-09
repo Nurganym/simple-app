@@ -1,31 +1,33 @@
 @import './color';
 @import './buttons';
+@import './mixins';
+@import './sizes';
 
 .main-section {
-  // background: linear-gradient(
-  //     to right bottom,
-  //     rgba(232, 246, 247, 0.587),
-  //     rgba(243, 241, 241, 0.363)
-  //   )
-  //   url(../assets/im1.jpg);
-
   background: url(../assets/im1.jpg);
-  height: 80vh;
+  height: 100vh;
   background-size: cover;
-  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top center;
 
   .content {
-    margin: 14rem;
-    text-align: center;
-    // color: $section-color;
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       color: $main-color;
       text-shadow: 3px 3px 3px $text-shadow;
     }
     p {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: $cream-color;
       margin-top: 35px;
     }
@@ -34,6 +36,21 @@
     }
     button:hover {
       @include hover;
+    }
+  }
+}
+@media (min-width: 550px) {
+  .main-section {
+    background-position: center center;
+  }
+  .content {
+    align-items: flex-end;
+    justify-content: center;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
     }
   }
 }

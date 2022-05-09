@@ -3,3 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin responsive-image($image-width, $image-height) {
+  background-size: cover;
+  height: 0;
+  padding-bottom: percentage($image-height / $image-width);
+  display: block;
+  position: relative;
+}

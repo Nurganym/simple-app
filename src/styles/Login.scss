@@ -1,31 +1,41 @@
 @import './color';
 @import './buttons';
 
-.forms {
-  background-color: $cream-color;
-  width: 50%;
-  height: 50vh;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-top: 2rem;
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: $login-color;
 }
-form {
-  color: $secondary-color;
-  font-size: 20px;
-  margin: 10rem 15rem;
+.forms {
+  background-color: $secondLogin-color;
+  width: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 4px;
+  box-sizing: 0px 1px 6px $border;
+}
+
+label {
   text-align: center;
-  display: block;
-  width: 50%;
+  text-transform: uppercase;
+}
+input {
+  border: 1px solid border;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+.button-class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  label {
-    text-transform: uppercase;
-  }
-  input {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  button {
-    @include button;
+button {
+  @include button;
+  &:hover {
+    background: $hover;
   }
 }

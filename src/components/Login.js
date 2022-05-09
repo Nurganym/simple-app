@@ -70,29 +70,35 @@ const Login = () => {
   }
 
   return (
-    <div className="forms">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="">Имя пользователя</label>
-        <input
-          type="text"
-          placeholder="name"
-          value={username}
-          onChange={changeHandlerUser}
-          required
-        />
-        <label htmlFor="">Пароль</label>
-        <input
-          type="password"
-          value={password}
-          placeholder="password"
-          onChange={changeHandlerPass}
-          required
-        />
-        <div>
-          <button type="submit">Войти</button>
-          {!!errorData && <div>{errorData}</div>}
-        </div>
-      </form>
+    <div className="wrapper">
+      <div className="forms">
+        <form onSubmit={handleSubmit}>
+          {/* <label htmlFor="">Username</label> */}
+          <div>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={changeHandlerUser}
+              required
+            />
+          </div>
+          {/* <label htmlFor="">Password</label> */}
+          <div>
+            <input
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChange={changeHandlerPass}
+              required
+            />
+          </div>
+          <div className="button-class">
+            <button type="submit">Sign in</button>
+            {!!errorData && <div>{errorData}</div>}
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
