@@ -1,5 +1,7 @@
 <h1 align="center">Hi 👋, I'm Nurganym</h1>
 <h3 align="center">A passionate frontend developer from Kyrgyzstan</h3>
+<h6 align="center">Overview </h6>
+This is the first step in my journey towards a career in frontend web development.  Every frontend web developer must master HTML and CSS, as well as learn how to program browsers. I used stacks in this project: HTML,CSS, React, Local-storage and Sass.The purpose of this project is to practice the above stacks in this project. I think I managed to do it.
 
 - 🔭 I’m currently working on [simple-app](https://github.com/Nurganym/simple-app)
 
